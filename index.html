@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>Kuru Kuru~</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,17 +12,15 @@
 </head>
 
 <body>
-    <img src="img/hertaa1.gif" class="preload" />
-    <img src="img/hertaa2.gif" class="preload" />
+    <img src="img/rudolph.gif" class="preload" />
     <div id="content">
-        <h1>Welcome to herta kuru</h1>
+        <h1>Welcome to the Greatest Science in the World!</h1>
         <hr id="subtitle-seperator" />
         <h2>
-            The website for Herta, the <del>annoying</del> cutest genius Honkai:
-            Star Rail character out there.
+            The website for Rudolph Von Stroheim, one of the <del>annoying</del> cutest JoJo Waifus character out there.
         </h2>
         <div id="counter-container">
-            <p>The kuru~ has been squished</p>
+            <p>The Rudolph Von Stroheim has been squished</p>
             <br />
             <br />
             <p id="counter">0</p>
@@ -31,7 +28,7 @@
             <br />
             <p>times</p>
             <button id="counter-button" onclick="counterClick()">
-                Squish the kuru~!
+                Squish the Stroheim~!
             </button>
         </div>
         <hr />
@@ -42,13 +39,13 @@
         </div>
     </div>
     <div id="footer">
-        <img id="herta-card" loading="lazy" src="img/card.jpg" alt="" />
+        <img id="herta-card" loading="lazy" src="img/card.webp" alt="" />
         <div id="footer-text">
-            <p>Herta gif made by</p>
+            <p>Strohein version made by</p>
             <p>
-                <a href="https://twitter.com/Seseren_kr" target="_blank"><iconify-icon icon="mdi:twitter"
-                        id="twitter-footer-icon" class="footer-icon"></iconify-icon><span
-                        class="footer-icon-text">@Seseren_kr</span></a>
+                <a href="https://github.com/runtime7error" target="_blank"><iconify-icon icon="mdi:github"
+                        id="github-footer-icon" class="footer-icon"></iconify-icon><span
+                        class="footer-icon-text">runtime7error</span></a>
             </p>
             <p id="footer-repository-text">
                 You can check out the GitHub repository here:
@@ -67,9 +64,7 @@
 <script>
     //varible
     var audioList = [
-        new Audio("audio/kuruto.mp3"),
-        new Audio("audio/kuru1.mp3"),
-        new Audio("audio/kuru2.mp3"),
+        new Audio("audio/brakamonoga.mp3")
     ];
 
     for (const audio of audioList) {
@@ -94,13 +89,8 @@
     function playKuru() {
         var audio;
 
-        if (firstSquish) {
-            firstSquish = false;
-            audio = audioList[0].cloneNode();
-        } else {
-            var random = Math.floor(Math.random() * 2) + 1;
-            audio = audioList[random].cloneNode();
-        }
+        firstSquish = false;
+        audio = audioList[0].cloneNode();
 
         audio.play();
 
@@ -113,12 +103,11 @@
         var counter_button = document.getElementById("counter-button");
         var id = null;
 
-        var random = Math.floor(Math.random() * 2) + 1;
         var elem = document.createElement("img");
-        elem.src = `img/hertaa${random}.gif`;
+        elem.src = `img/rudolph.gif`;
         elem.style.position = "absolute";
         elem.style.right = "-510px";
-        elem.style.top = counter_button.getClientRects()[0].bottom + scrollY - 430 + "px"
+        elem.style.top = counter_button.getClientRects()[0].bottom + scrollY - 290 + "px"
         elem.style.zIndex = "-1";
         document.body.appendChild(elem);
 
@@ -131,7 +120,7 @@
                 clearInterval(id);
                 elem.remove()
             } else {
-                pos += 20;
+                pos += 4.4;
                 elem.style.right = pos + 'px';
             }
         }
